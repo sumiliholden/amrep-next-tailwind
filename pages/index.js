@@ -1,13 +1,13 @@
 //components
-import Layout from "../components/Layouts/Layout";
-import { CtaSectioncomponent } from "../components/CtaSectionComponent";
+import Layout from "../layouts/Layout";
+import { CtaSectioncomponent } from "../components/sections/CtaSectionComponent";
 import {
   FeatureSectionComponent,
   GradientFeatureSectionComponent,
-} from "../components/FeatureSectionComponent";
-import { HeroComponent } from "../components/HeroComponent";
-import { LogoCloudComponent } from "../components/LogoCloudComponent";
-import { StatsComponent } from "../components/StatsComponent";
+} from "../components/sections/FeatureSectionComponent";
+import { HeroComponent } from "../components/sections/HeroComponent";
+import { LogoCloudComponent } from "../components/sections/LogoCloudComponent";
+import { StatsComponent } from "../components/sections/StatsComponent";
 export default function Home() {
   return (
     <div>

@@ -17,6 +17,7 @@ const footerNavigation = {
     { name: "Jobs", href: "#" },
     { name: "Press", href: "#" },
     { name: "Partners", href: "#" },
+    { name: "FAQs", href: "#" },
   ],
   legal: [
     { name: "Claim", href: "#" },
