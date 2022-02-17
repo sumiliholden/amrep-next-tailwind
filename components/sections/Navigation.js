@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Fragment, useEffect } from "react";
 import { Popover, Transition } from "@headlessui/react";
 import {
@@ -121,13 +122,13 @@ const solutions = [
   },
   {
     name: "Live Chat",
-    description: "Your customers' data will be safe and secure.",
+    description: "Your customers data will be safe and secure.",
     href: "#",
     icon: ChatAlt2Icon,
   },
   {
     name: "Knowledge Base",
-    description: "Connect with third-party tools that you're already using.",
+    description: "Connect with third-party tools that you are already using.",
     href: "#",
     icon: QuestionMarkCircleIcon,
   },
@@ -168,9 +169,6 @@ function login() {
 export const Navigation = () => {
   const router = useRouter();
 
-  useEffect(() => {
-    console.log(subnav);
-  });
   return (
     <header>
       <Popover className="relative bg-white">
@@ -179,7 +177,7 @@ export const Navigation = () => {
             <Link href="/">
               <a>
                 <span className="sr-only">Workflow</span>
-                <img
+                <Image
                   className="h-8 w-auto sm:h-10"
                   src="https://tailwindui.com/img/logos/workflow-mark-purple-600-to-indigo-600.svg"
                   alt=""
@@ -308,7 +306,7 @@ export const Navigation = () => {
               <div className="pt-5 pb-6 px-5">
                 <div className="flex items-center justify-between">
                   <div>
-                    <img
+                    <Image
                       className="h-8 w-auto"
                       src="https://tailwindui.com/img/logos/workflow-mark-purple-600-to-indigo-600.svg"
                       alt="Workflow"

@@ -1,3 +1,4 @@
+import Image from "next/image";
 //components
 import Layout from "../layouts/Layout";
 
@@ -7,7 +8,7 @@ export default function Example() {
       <div className="relative bg-white">
         <div className="lg:absolute lg:inset-0">
           <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-            <img
+            <Image
               className="h-56 w-full object-cover lg:absolute lg:h-full"
               src="https://images.unsplash.com/photo-1556761175-4b46a572b786?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1567&q=80"
               alt=""
@@ -18,11 +19,11 @@ export default function Example() {
           <div className="lg:pr-8">
             <div className="max-w-md mx-auto sm:max-w-lg lg:mx-0">
               <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl">
-                Let's work together
+                Lets work together
               </h2>
               <p className="mt-4 text-lg text-gray-500 sm:mt-3">
-                We’d love to hear from you! Send us a message using the form
-                opposite, or email us. We’d love to hear from you! Send us a
+                We&apos;d love to hear from you! Send us a message using the form
+                opposite, or email us. We&apos;d love to hear from you! Send us a
                 message using the form opposite, or email us.
               </p>
               <form

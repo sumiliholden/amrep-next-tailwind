@@ -1,3 +1,4 @@
+import Image from "next/image";
 //components
 import Layout from "../Layouts/Layout";
 const people = [
@@ -59,7 +60,7 @@ export default function OurTeam() {
                 <li key={person.name}>
                   <div className="space-y-4">
                     <div className="aspect-w-3 aspect-h-2">
-                      <img
+                      <Image
                         className="object-cover shadow-lg rounded-lg"
                         src={person.imageUrl}
                         alt=""

@@ -1,26 +1,33 @@
+import Image from "next/image";
 export const CtaSectioncomponent = () => {
   return (
     <div className="bg-white">
-      <div className="max-w-4xl mx-auto py-16 px-4 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8 lg:flex lg:items-center lg:justify-between">
-        <h2 className="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-          <span className="block">Ready to get started?</span>
-          <span className="block bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">
-            Get in touch or create an account.
-          </span>
-        </h2>
-        <div className="mt-6 space-y-4 sm:space-y-0 sm:flex sm:space-x-5">
-          <a
-            href="#"
-            className="flex items-center justify-center bg-gradient-to-r from-purple-600 to-indigo-600 bg-origin-border px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white hover:from-purple-700 hover:to-indigo-700"
-          >
-            Learn more
-          </a>
-          <a
-            href="#"
-            className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-indigo-800 bg-indigo-50 hover:bg-indigo-100"
-          >
-            Get started
-          </a>
+      <div className="max-w-8xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
+        <div className="overflow-hidden lg:grid lg:grid-cols-2 lg:gap-4">
+          <div className="pt-10 pb-12 px-6 sm:pt-16 sm:px-16 lg:py-16 lg:pr-0 xl:py-20 xl:px-20">
+            <div className="lg:self-center">
+              <h2 className="text-3xl font-extrabold text-base-content sm:text-5xl">
+                <span className="block">Real Estate Photo Post Processing </span>
+                <span className="block">Based in Virginia Beach, VA</span>
+              </h2>
+              <p className="mt-4 text-2xl sm:text-2xl leading-6 text-base-content">
+              New clients enjoy 1 Week of Free Processing as a trial before you commit!
+              </p>
+              <a
+                href="#"
+                className="mt-8 bg-indigo-600 border border-transparent rounded-md shadow px-5 py-3 inline-flex items-center font-medium text-white hover:bg-indigo-700"
+              >
+                Sign up for free
+              </a>
+            </div>
+          </div>
+          <div className="-mt-6 aspect-w-5 aspect-h-3 md:aspect-w-2 md:aspect-h-1">
+            <Image
+              className="transform translate-x-6 translate-y-6 rounded-md object-cover object-left-top sm:translate-x-16 lg:translate-y-20"
+              src="https://tailwindui.com/img/component-images/full-width-with-sidebar.jpg"
+              alt="App screenshot"
+            />
+          </div>
         </div>
       </div>
     </div>
