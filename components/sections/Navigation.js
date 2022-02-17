@@ -98,6 +98,13 @@ const navigation = [
     ],
   },
 ];
+let subnav = [];
+navigation.map((data) => {
+  if (data.hasSubnav)
+    data.subNav.map((nav) => {
+      subnav = [...subnav, nav];
+    });
+});
 const solutions = [
   {
     name: "Inbox",
@@ -128,35 +135,42 @@ const solutions = [
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
-function login(){
-  const {user, error, isLoading } = useUser();
+function login() {
+  const { user, error, isLoading } = useUser();
 
   if (isLoading) return <div>Loading...</div>;
-    if (error) return <div>{error.message}</div>;
+  if (error) return <div>{error.message}</div>;
 
-    if (user) {
-      return (
-        <div>
-          <span>
-            Welcome, {user.name}
-          </span>
-          <a
+  if (user) {
+    return (
+      <div>
+        <span>Welcome, {user.name}</span>
+        <a
           href="/api/auth/logout"
           className="ml-8 whitespace-nowrap inline-flex items-center justify-center bg-gradient-to-r from-purple-600 to-indigo-600 bg-origin-border px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white hover:from-purple-700 hover:to-indigo-700"
-          >Logout</a>
-        </div>
-        
-      );
-    }
+        >
+          Logout
+        </a>
+      </div>
+    );
+  }
 
-    return  <a
-    href="/api/auth/login"
-    className="ml-8 whitespace-nowrap inline-flex items-center justify-center bg-gradient-to-r from-purple-600 to-indigo-600 bg-origin-border px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white hover:from-purple-700 hover:to-indigo-700"
-    >Login</a>;
-  
+  return (
+    <a
+      href="/api/auth/login"
+      className="ml-8 whitespace-nowrap inline-flex items-center justify-center bg-gradient-to-r from-purple-600 to-indigo-600 bg-origin-border px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white hover:from-purple-700 hover:to-indigo-700"
+    >
+      Login
+    </a>
+  );
 }
+
 export const Navigation = () => {
   const router = useRouter();
+
+  useEffect(() => {
+    console.log(subnav);
+  });
   return (
     <header>
       <Popover className="relative bg-white">
@@ -265,16 +279,15 @@ export const Navigation = () => {
             )}
           </Popover.Group>
           <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
-          
-              {/* <a href="/api/auth/login" className="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900">
+            {/* <a href="/api/auth/login" className="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900">
                 Sign inz
               </a> */}
-              {/* <a
+            {/* <a
                 href="#"
                 className="ml-8 whitespace-nowrap inline-flex items-center justify-center bg-gradient-to-r from-purple-600 to-indigo-600 bg-origin-border px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white hover:from-purple-700 hover:to-indigo-700"
               > */}
-                {login()}
-              {/* </a> */}
+            {login()}
+            {/* </a> */}
           </div>
         </div>
 
@@ -310,43 +323,34 @@ export const Navigation = () => {
                 </div>
                 <div className="mt-6">
                   <nav className="grid grid-cols-1 gap-7">
-                    {solutions.map((item) => (
-                      <a
-                        key={item.name}
-                        href={item.href}
-                        className="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50"
-                      >
-                        <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-gradient-to-r from-purple-600 to-indigo-600 text-white">
-                          <item.icon className="h-6 w-6" aria-hidden="true" />
-                        </div>
-                        <div className="ml-4 text-base font-medium text-gray-900">
-                          {item.name}
-                        </div>
-                      </a>
+                    {subnav.map((item) => (
+                      <Link key={item.name} href={item.href}>
+                        <a className="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50">
+                          <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-gradient-to-r from-purple-600 to-indigo-600 text-white">
+                            <item.icon className="h-6 w-6" aria-hidden="true" />
+                          </div>
+                          <div className="ml-4 text-base font-medium text-gray-900">
+                            {item.name}
+                          </div>
+                        </a>
+                      </Link>
                     ))}
                   </nav>
                 </div>
               </div>
               <div className="py-6 px-5">
                 <div className="grid grid-cols-2 gap-4">
-                  <a
-                    href="#"
-                    className="text-base font-medium text-gray-900 hover:text-gray-700"
-                  >
-                    Pricing
-                  </a>
-                  <a
-                    href="#"
-                    className="text-base font-medium text-gray-900 hover:text-gray-700"
-                  >
-                    Partners
-                  </a>
-                  <a
-                    href="#"
-                    className="text-base font-medium text-gray-900 hover:text-gray-700"
-                  >
-                    Company
-                  </a>
+                  {navigation.map((item) =>
+                    !item.hasSubnav ? (
+                      <Link href={item.href} key={item.name}>
+                        <a className="text-base font-medium text-gray-900 hover:text-gray-700">
+                          {item.name}
+                        </a>
+                      </Link>
+                    ) : (
+                      ""
+                    )
+                  )}
                 </div>
                 <div className="mt-6">
                   <a
