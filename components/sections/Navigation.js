@@ -31,16 +31,19 @@ const navigation = [
       {
         name: "Photo Editing",
         href: "/photo-editing",
+        description: "See prices of photo editing",
         icon: CameraIcon,
       },
       {
         name: "Video Editing",
         href: "/video-editing",
+        description: "See prices of video editing",
         icon: VideoCameraIcon,
       },
       {
         name: "Twilight Editing",
-        href: "/twilight-editing",
+        href: "/virtual-twilight-editing",
+        description: "See prices of virtual twilight editing",
         icon: PencilIcon,
       },
     ],
@@ -53,23 +56,26 @@ const navigation = [
       {
         name: "About Us",
         href: "/about",
+        description: "About the Company",
         icon: UserIcon,
       },
       {
         name: "Our Team",
         href: "/our-team",
+        description: "Meet the Team!",
         icon: UserGroupIcon,
       },
       {
         name: "Contact",
         href: "/contact",
+        description: "Contact Us",
         icon: PhoneIcon,
       },
     ],
   },
   {
     name: "Showcase",
-    href: "/pricing",
+    href: "/showcase",
     hasSubnav: false,
   },
   {
@@ -80,11 +86,13 @@ const navigation = [
       {
         name: "Packages",
         href: "/packages",
+        description: "See Packages",
         icon: GiftIcon,
       },
       {
         name: "Free Trial",
         href: "/trial",
+        description: "1 week free trial!",
         icon: AcademicCapIcon,
       },
     ],
@@ -240,7 +248,7 @@ export const Navigation = () => {
                                         {item.name}
                                       </p>
                                       <p className="mt-1 text-sm text-gray-500">
-                                        {item.name}
+                                        {item.description}
                                       </p>
                                     </div>
                                   </a>

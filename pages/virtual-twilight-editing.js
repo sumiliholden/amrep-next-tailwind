@@ -5,8 +5,8 @@ import { PricingPlanComponent } from "../components/sections/PricingPlanComponen
 import { LogoCloudComponentOnBrand } from "../components/sections/LogoCloudComponent";
 import { FaqComponent } from "../components/sections/FaqComponent";
 
-const title = "Photo Editing"
-export default function PhotoEditing() {
+const title = "Virtual Twilight Editing"
+export default function VideoEditing() {
   return (
     <>
       <Layout>

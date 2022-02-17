@@ -5,13 +5,14 @@ import { PricingPlanComponent } from "../components/sections/PricingPlanComponen
 import { LogoCloudComponentOnBrand } from "../components/sections/LogoCloudComponent";
 import { FaqComponent } from "../components/sections/FaqComponent";
 
-export default function Example() {
+const title = "Video Editing"
+export default function VideoEditing() {
   return (
     <>
       <Layout>
         <div className="bg-white">
           {/* Pricing with four tiers and toggle */}
-          <PricingPlanComponent />
+          <PricingPlanComponent title={title}/>
           {/* Logo cloud on brand */}
           <LogoCloudComponentOnBrand />
           {/* FAQ offset */}

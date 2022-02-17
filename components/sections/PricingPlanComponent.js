@@ -111,14 +111,14 @@ const tiers = [
     ],
   },
 ];
-export const PricingPlanComponent = () => {
+export const PricingPlanComponent = (props) => {
   return (
     <>
       <div className="bg-gradient-to-b from-white to-gray-50">
         <div className="max-w-7xl mx-auto pt-24 px-4 sm:px-6 lg:px-8">
           <div className="sm:flex sm:flex-col sm:align-center">
             <h1 className="text-5xl font-extrabold text-gray-900 sm:text-center">
-              Pricing Plans
+              {props.title} Pricing Plans
             </h1>
             <p className="mt-5 text-xl text-gray-500 sm:text-center">
               Start building for free, then add a site plan to go live. Account
