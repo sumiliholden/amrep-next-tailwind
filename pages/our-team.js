@@ -64,6 +64,8 @@ export default function OurTeam() {
                         className="object-cover shadow-lg rounded-lg"
                         src={person.imageUrl}
                         alt=""
+                        width="1024"
+                        height="1024"
                       />
                     </div>
 

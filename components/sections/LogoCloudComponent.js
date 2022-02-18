@@ -34,13 +34,18 @@ export const LogoCloudComponent = () => {
               className="h-12"
               src="https://tailwindui.com/img/logos/tuple-logo-gray-400.svg"
               alt="Tuple"
+              height="150"
+              width="150"
             />
           </div>
           <div className="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
            <Image
               className="h-12"
               src="https://tailwindui.com/img/logos/mirage-logo-gray-400.svg"
+              
               alt="Mirage"
+              height="150"
+              width="150"
             />
           </div>
           <div className="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
@@ -48,6 +53,8 @@ export const LogoCloudComponent = () => {
               className="h-12"
               src="https://tailwindui.com/img/logos/statickit-logo-gray-400.svg"
               alt="StaticKit"
+              height="150"
+              width="150"
             />
           </div>
           <div className="col-span-1 flex justify-center md:col-span-2 md:col-start-2 lg:col-span-1">
@@ -55,6 +62,8 @@ export const LogoCloudComponent = () => {
               className="h-12"
               src="https://tailwindui.com/img/logos/transistor-logo-gray-400.svg"
               alt="Transistor"
+              height="150"
+              width="150"
             />
           </div>
           <div className="col-span-2 flex justify-center md:col-span-2 md:col-start-4 lg:col-span-1">
@@ -62,6 +71,8 @@ export const LogoCloudComponent = () => {
               className="h-12"
               src="https://tailwindui.com/img/logos/workcation-logo-gray-400.svg"
               alt="Workcation"
+              height="150"
+              width="150"
             />
           </div>
         </div>
@@ -85,7 +96,7 @@ export const LogoCloudComponentOnBrand = () => {
                   key={logo.name}
                   className="mt-4 ml-8 flex flex-grow flex-shrink-0 lg:flex-grow-0 lg:ml-4"
                 >
-                  <Image className="h-12" src={logo.url} alt={logo.name} />
+                  <img className="h-12" src={logo.url} alt={logo.name} />
                 </div>
               ))}
             </div>
