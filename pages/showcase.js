@@ -4,7 +4,7 @@ import ImageComparison from "../components/ImageComparison";
 export default function Showcase() {
   return (
     <Layout>
-      <div className="bg-gray-50">
+      <div className="relative bg-white dark:bg-gray-800">
         <ImageComparison />
       </div>
     </Layout>

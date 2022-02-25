@@ -10,7 +10,7 @@ export default function PhotoEditing() {
   return (
     <>
       <Layout>
-        <div className="bg-white">
+        <div className="bg-white dark:bg-gray-800">
           {/* Pricing with four tiers and toggle */}
           <PricingPlanComponent title={title}/>
           {/* Logo cloud on brand */}

@@ -114,17 +114,17 @@ const tiers = [
 export const PricingPlanComponent = (props) => {
   return (
     <>
-      <div className="bg-gradient-to-b from-white to-gray-50">
+      <div className="bg-white dark:bg-gray-800">
         <div className="max-w-7xl mx-auto pt-24 px-4 sm:px-6 lg:px-8">
           <div className="sm:flex sm:flex-col sm:align-center">
-            <h1 className="text-5xl font-extrabold text-gray-900 sm:text-center">
+            <h1 className="text-5xl font-extrabold text-base sm:text-center">
               {props.title} Pricing Plans
             </h1>
-            <p className="mt-5 text-xl text-gray-500 sm:text-center">
+            <p className="mt-5 text-xl text-base sm:text-center">
               Start building for free, then add a site plan to go live. Account
               plans unlock additional features.
             </p>
-            <div className="relative mt-6 bg-gray-100 rounded-lg p-0.5 flex self-center sm:mt-8">
+            <div className="relative mt-6 bg-gray-100 dark:bg-gray-500 rounded-lg p-0.5 flex self-center sm:mt-8">
               <button
                 type="button"
                 className="relative bg-white border-gray-200 rounded-md shadow-sm py-2 w-1/2 text-sm font-medium text-gray-900 whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-purple-500 focus:z-10 sm:w-auto sm:px-8"
@@ -146,17 +146,17 @@ export const PricingPlanComponent = (props) => {
                 className="border border-gray-200 rounded-lg shadow-sm divide-y divide-gray-200"
               >
                 <div className="p-6">
-                  <h2 className="text-lg leading-6 font-medium text-gray-900">
+                  <h2 className="text-lg leading-6 font-medium text-base">
                     {tier.name}
                   </h2>
-                  <p className="mt-4 text-sm text-gray-500">
+                  <p className="mt-4 text-sm text-base">
                     {tier.description}
                   </p>
                   <p className="mt-8">
-                    <span className="text-4xl font-extrabold text-gray-900">
+                    <span className="text-4xl font-extrabold text-base">
                       ${tier.priceMonthly}
                     </span>{" "}
-                    <span className="text-base font-medium text-gray-500">
+                    <span className="text-base font-medium text-base">
                       /mo
                     </span>
                   </p>
@@ -168,7 +168,7 @@ export const PricingPlanComponent = (props) => {
                   </a>
                 </div>
                 <div className="pt-6 pb-8 px-6">
-                  <h3 className="text-xs font-medium text-gray-900 tracking-wide uppercase">
+                  <h3 className="text-xs font-medium base tracking-wide uppercase">
                     Whats included
                   </h3>
                   <ul role="list" className="mt-6 space-y-4">
@@ -178,7 +178,7 @@ export const PricingPlanComponent = (props) => {
                           className="flex-shrink-0 h-5 w-5 text-green-500"
                           aria-hidden="true"
                         />
-                        <span className="text-sm text-gray-500">{feature}</span>
+                        <span className="text-sm text-base">{feature}</span>
                       </li>
                     ))}
                   </ul>
@@ -191,10 +191,10 @@ export const PricingPlanComponent = (props) => {
         {/* Feature list */}
         <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:py-24 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl font-extrabold text-gray-900">
+            <h2 className="text-3xl font-extrabold text-base-content">
               All-in-one platform
             </h2>
-            <p className="mt-4 text-lg text-gray-500">
+            <p className="mt-4 text-lg text-base-content">
               Ac euismod vel sit maecenas id pellentesque eu sed consectetur.
               Malesuada adipiscing sagittis vel nulla nec.
             </p>
@@ -207,11 +207,11 @@ export const PricingPlanComponent = (props) => {
                     className="absolute h-6 w-6 text-green-500"
                     aria-hidden="true"
                   />
-                  <p className="ml-9 text-lg leading-6 font-medium text-gray-900">
+                  <p className="ml-9 text-lg leading-6 font-medium text-base-content">
                     {feature.name}
                   </p>
                 </dt>
-                <dd className="mt-2 ml-9 flex text-base text-gray-500 lg:py-0 lg:pb-4">
+                <dd className="mt-2 ml-9 flex text-base text-base-content lg:py-0 lg:pb-4">
                   {feature.description}
                 </dd>
               </div>

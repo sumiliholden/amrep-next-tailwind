@@ -5,7 +5,7 @@ import Layout from "../layouts/Layout";
 export default function Example() {
   return (
     <Layout>
-      <div className="relative bg-white">
+      <div className="relative bg-white dark:bg-gray-800">
         <div className="lg:absolute lg:inset-0">
           <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
             <img
@@ -21,7 +21,7 @@ export default function Example() {
               <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl">
                 Lets work together
               </h2>
-              <p className="mt-4 text-lg text-gray-500 sm:mt-3">
+              <p className="mt-4 text-lg text-base-content sm:mt-3">
                 We&apos;d love to hear from you! Send us a message using the form
                 opposite, or email us. We&apos;d love to hear from you! Send us a
                 message using the form opposite, or email us.
@@ -34,7 +34,7 @@ export default function Example() {
                 <div>
                   <label
                     htmlFor="first-name"
-                    className="block text-sm font-medium text-gray-700"
+                    className="block text-sm font-medium text-base-content"
                   >
                     First name
                   </label>
@@ -51,7 +51,7 @@ export default function Example() {
                 <div>
                   <label
                     htmlFor="last-name"
-                    className="block text-sm font-medium text-gray-700"
+                    className="block text-sm font-medium text-base-content"
                   >
                     Last name
                   </label>
@@ -68,7 +68,7 @@ export default function Example() {
                 <div className="sm:col-span-2">
                   <label
                     htmlFor="email"
-                    className="block text-sm font-medium text-gray-700"
+                    className="block text-sm font-medium text-base-content"
                   >
                     Email
                   </label>
@@ -85,7 +85,7 @@ export default function Example() {
                 <div className="sm:col-span-2">
                   <label
                     htmlFor="company"
-                    className="block text-sm font-medium text-gray-700"
+                    className="block text-sm font-medium text-base-content"
                   >
                     Company
                   </label>
@@ -103,13 +103,13 @@ export default function Example() {
                   <div className="flex justify-between">
                     <label
                       htmlFor="phone"
-                      className="block text-sm font-medium text-gray-700"
+                      className="block text-sm font-medium text-base-content"
                     >
                       Phone
                     </label>
                     <span
                       id="phone-description"
-                      className="text-sm text-gray-500"
+                      className="text-sm text-base-content"
                     >
                       Optional
                     </span>
@@ -129,13 +129,13 @@ export default function Example() {
                   <div className="flex justify-between">
                     <label
                       htmlFor="how-can-we-help"
-                      className="block text-sm font-medium text-gray-700"
+                      className="block text-sm font-medium text-base-content"
                     >
                       How can we help you?
                     </label>
                     <span
                       id="how-can-we-help-description"
-                      className="text-sm text-gray-500"
+                      className="text-sm text-base-content"
                     >
                       Max. 500 characters
                     </span>
@@ -152,7 +152,7 @@ export default function Example() {
                   </div>
                 </div>
                 <fieldset className="sm:col-span-2">
-                  <legend className="block text-sm font-medium text-gray-700">
+                  <legend className="block text-sm font-medium text-base-content">
                     Expected budget
                   </legend>
                   <div className="mt-4 grid grid-cols-1 gap-y-4">
@@ -165,7 +165,7 @@ export default function Example() {
                         className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300"
                       />
                       <label htmlFor="budget-under-25k" className="ml-3">
-                        <span className="block text-sm text-gray-700">
+                        <span className="block text-sm text-base-content">
                           Less than $25K
                         </span>
                       </label>
@@ -179,7 +179,7 @@ export default function Example() {
                         className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300"
                       />
                       <label htmlFor="budget-25k-50k" className="ml-3">
-                        <span className="block text-sm text-gray-700">
+                        <span className="block text-sm text-base-content">
                           $25K – $50K
                         </span>
                       </label>
@@ -193,7 +193,7 @@ export default function Example() {
                         className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300"
                       />
                       <label htmlFor="budget-50k-100k" className="ml-3">
-                        <span className="block text-sm text-gray-700">
+                        <span className="block text-sm text-base-content">
                           $50K – $100K
                         </span>
                       </label>
@@ -207,7 +207,7 @@ export default function Example() {
                         className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300"
                       />
                       <label htmlFor="budget-over-100k" className="ml-3">
-                        <span className="block text-sm text-gray-700">
+                        <span className="block text-sm text-base-content">
                           $100K+
                         </span>
                       </label>
@@ -217,7 +217,7 @@ export default function Example() {
                 <div className="sm:col-span-2">
                   <label
                     htmlFor="how-did-you-hear-about-us"
-                    className="block text-sm font-medium text-gray-700"
+                    className="block text-sm font-medium text-base-content"
                   >
                     How did you hear about us?
                   </label>

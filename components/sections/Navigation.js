@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Fragment, useEffect } from "react";
+import { Fragment, useEffect, useState } from "react";
 import { Popover, Transition } from "@headlessui/react";
 import {
   AnnotationIcon,
@@ -17,11 +17,11 @@ import {
   GiftIcon,
   AcademicCapIcon,
 } from "@heroicons/react/outline";
-import { ChevronDownIcon } from "@heroicons/react/solid";
+import { ChevronDownIcon, MoonIcon, SunIcon } from "@heroicons/react/solid";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useUser } from "@auth0/nextjs-auth0";
-
+import { useTheme } from "next-themes";
 //components
 const navigation = [
   {
@@ -166,10 +166,38 @@ function login() {
 
 export const Navigation = () => {
   const router = useRouter();
+  const { systemTheme, theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+  const renderThemeChanger = () => {
+    if (!mounted) return null;
+    const currentTheme = theme === "system" ? systemTheme : theme;
+
+    if (currentTheme === "dark") {
+      return (
+        <SunIcon
+          className="w-7 h-7"
+          role="button"
+          onClick={() => setTheme("light")}
+        />
+      );
+    } else {
+      return (
+        <MoonIcon
+          className="w-7 h-7"
+          role="button"
+          onClick={() => setTheme("dark")}
+        />
+      );
+    }
+  };
 
   return (
-    <header>
-      <Popover className="relative bg-white">
+    <header className="dark:border-gray-700">
+      <Popover className="relative ">
         <div className="flex justify-between items-center max-w-7xl mx-auto px-4 py-6 sm:px-6 md:justify-start md:space-x-10 lg:px-8">
           <div className="flex justify-start lg:w-0 lg:flex-1">
             <Link href="/">
@@ -197,8 +225,8 @@ export const Navigation = () => {
                   <a
                     className={
                       router.asPath == item.href
-                        ? "text-base font-medium text-gray-900 hover:text-gray-900 border-b-2 border-indigo-500 pb-1"
-                        : "text-base font-medium text-gray-500 hover:text-gray-900"
+                        ? "text-base font-medium hover:scale-125 border-b-2 border-indigo-500 pb-1"
+                        : "text-base font-medium hover:scale-125"
                     }
                   >
                     {item.name}
@@ -208,18 +236,12 @@ export const Navigation = () => {
                 <Popover className="relative" key={item.name}>
                   {({ open }) => (
                     <>
-                      <Popover.Button
-                        className={classNames(
-                          open ? "text-gray-900" : "text-gray-500",
-                          "group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                        )}
-                      >
-                        <span>{item.name}</span>
+                      <Popover.Button className="text-base group rounded-md inline-flex items-center text-base font-medium hover:scale-125">
+                        <span className="text-base font-medium ">
+                          {item.name}
+                        </span>
                         <ChevronDownIcon
-                          className={classNames(
-                            open ? "text-gray-600" : "text-gray-400",
-                            "ml-2 h-5 w-5 group-hover:text-gray-500"
-                          )}
+                          className="text-base ml-2 h-5 w-5"
                           aria-hidden="true"
                         />
                       </Popover.Button>
@@ -235,15 +257,15 @@ export const Navigation = () => {
                       >
                         <Popover.Panel className="absolute z-10 -ml-4 mt-3 transform w-screen max-w-md lg:max-w-2xl lg:ml-0 lg:left-1/2 lg:-translate-x-1/2">
                           <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
-                            <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8 lg:grid-cols-2">
+                            <div className="relative grid gap-6 bg-white dark:bg-gray-900 px-5 py-6 sm:gap-8 sm:p-8 lg:grid-cols-2">
                               {item.subNav.map((item) => (
                                 <Link href={item.href} key={item.name}>
                                   <a
                                     className={classNames(
                                       router.asPath == item.href
-                                        ? "bg-gray-100"
+                                        ? "bg-gray-200 dark:bg-gray-600"
                                         : "",
-                                      "-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
+                                      "-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50 dark:hover:bg-gray-600"
                                     )}
                                   >
                                     <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-gradient-to-r from-purple-600 to-indigo-600 text-white sm:h-12 sm:w-12">
@@ -253,10 +275,10 @@ export const Navigation = () => {
                                       />
                                     </div>
                                     <div className="ml-4">
-                                      <p className="text-base font-medium text-gray-900">
+                                      <p className="text-base font-medium ">
                                         {item.name}
                                       </p>
-                                      <p className="mt-1 text-sm text-gray-500">
+                                      <p className="mt-1 text-sm text-base font-small">
                                         {item.description}
                                       </p>
                                     </div>
@@ -274,6 +296,8 @@ export const Navigation = () => {
             )}
           </Popover.Group>
           <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
+            {renderThemeChanger()}
+
             {/* <a href="/api/auth/login" className="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900">
                 Sign inz
               </a> */}
@@ -285,7 +309,7 @@ export const Navigation = () => {
             {/* </a> */}
           </div>
         </div>
-
+        {/* mobile layout */}
         <Transition
           as={Fragment}
           enter="duration-200 ease-out"
@@ -299,7 +323,7 @@ export const Navigation = () => {
             focus
             className="absolute z-30 top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden"
           >
-            <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
+            <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white dark:bg-gray-800 divide-y-2 divide-gray-50">
               <div className="pt-5 pb-6 px-5">
                 <div className="flex items-center justify-between">
                   <div>
@@ -324,7 +348,7 @@ export const Navigation = () => {
                           <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-gradient-to-r from-purple-600 to-indigo-600 text-white">
                             <item.icon className="h-6 w-6" aria-hidden="true" />
                           </div>
-                          <div className="ml-4 text-base font-medium text-gray-900">
+                          <div className="ml-4 text-base font-medium text-base-content">
                             {item.name}
                           </div>
                         </a>
@@ -338,7 +362,7 @@ export const Navigation = () => {
                   {navigation.map((item) =>
                     !item.hasSubnav ? (
                       <Link href={item.href} key={item.name}>
-                        <a className="text-base font-medium text-gray-900 hover:text-gray-700">
+                        <a className="text-base font-medium text-base-content ">
                           {item.name}
                         </a>
                       </Link>
@@ -354,10 +378,10 @@ export const Navigation = () => {
                   >
                     Sign up
                   </a>
-                  <p className="mt-6 text-center text-base font-medium text-gray-500">
+                  <p className="mt-6 text-center text-base font-medium text-base-content">
                     Existing customer?
-                    <a href="#" className="text-gray-900">
-                      Sign in
+                    <a href="#" className="text-base-content">
+                       Sign in
                     </a>
                   </p>
                 </div>

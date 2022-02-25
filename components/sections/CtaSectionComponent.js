@@ -1,7 +1,7 @@
 import Image from "next/image";
 export const CtaSectioncomponent = () => {
   return (
-    <div className="bg-white">
+    <div className="bg-white dark:bg-gray-800">
       <div className="max-w-8xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
         <div className="overflow-hidden lg:grid lg:grid-cols-2 lg:gap-4">
           <div className="pt-10 pb-12 px-6 sm:pt-16 sm:px-16 lg:py-16 lg:pr-0 xl:py-20 xl:px-20">

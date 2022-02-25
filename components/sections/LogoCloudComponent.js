@@ -23,7 +23,7 @@ const logos = [
 ];
 export const LogoCloudComponent = () => {
   return (
-    <div className="bg-gray-100">
+    <div className="bg-gray-100 dark:bg-gray-700">
       <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
         <p className="text-center text-sm font-semibold uppercase text-gray-500 tracking-wide">
           Trusted by over 5 very average small businesses

@@ -8,19 +8,19 @@ export default function Example() {
   return (
     <Layout>
       <Header title={title} description={description}/>
-      <div className="bg-white">
+      <div >
         <div className="mx-auto py-12 px-4 max-w-7xl sm:px-6 lg:px-8 lg:py-24">
           <div className="md:grid md:grid-cols-3 md:gap-6">
             
             <div className="mt-5 md:mt-0 md:col-span-3">
               <form action="#" method="POST">
                 <div className="shadow sm:rounded-md sm:overflow-hidden">
-                  <div className="px-4 py-5 bg-white space-y-6 sm:p-6">
+                  <div className="px-4 py-5 bg-white dark:bg-gray-800 space-y-6 sm:p-6">
                     <div className="grid grid-cols-3 gap-6">
                       <div className="col-span-3 sm:col-span-2">
                         <label
                           htmlFor="company-website"
-                          className="block text-sm font-medium text-gray-700"
+                          className="block text-sm font-medium text-base-content"
                         >
                           Website
                         </label>
@@ -42,7 +42,7 @@ export default function Example() {
                     <div>
                       <label
                         htmlFor="about"
-                        className="block text-sm font-medium text-gray-700"
+                        className="block text-sm font-medium text-base-content"
                       >
                         About
                       </label>
@@ -56,14 +56,14 @@ export default function Example() {
                           defaultValue={""}
                         />
                       </div>
-                      <p className="mt-2 text-sm text-gray-500">
+                      <p className="mt-2 text-sm text-base-content">
                         Brief description for your profile. URLs are
                         hyperlinked.
                       </p>
                     </div>
 
                     <div>
-                      <label className="block text-sm font-medium text-gray-700">
+                      <label className="block text-sm font-medium text-base-content">
                         Photo
                       </label>
                       <div className="mt-1 flex items-center">
@@ -86,7 +86,7 @@ export default function Example() {
                     </div>
 
                     <div>
-                      <label className="block text-sm font-medium text-gray-700">
+                      <label className="block text-sm font-medium text-base-content">
                         Cover photo
                       </label>
                       <div className="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-md">
@@ -105,10 +105,10 @@ export default function Example() {
                               strokeLinejoin="round"
                             />
                           </svg>
-                          <div className="flex text-sm text-gray-600">
+                          <div className="flex text-sm text-base-content">
                             <label
                               htmlFor="file-upload"
-                              className="relative cursor-pointer bg-white rounded-md font-medium text-indigo-600 hover:text-indigo-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500"
+                              className="relative cursor-pointer rounded-md font-medium text-indigo-600 hover:text-indigo-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500"
                             >
                               <span>Upload a file</span>
                               <input
@@ -120,14 +120,14 @@ export default function Example() {
                             </label>
                             <p className="pl-1">or drag and drop</p>
                           </div>
-                          <p className="text-xs text-gray-500">
+                          <p className="text-xs text-base-content">
                             PNG, JPG, GIF up to 10MB
                           </p>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div className="px-4 py-3 bg-gray-50 text-right sm:px-6">
+                  <div className="px-4 py-3 bg-gray-50 dark:bg-gray-800 text-right sm:px-6">
                     <button
                       type="submit"
                       className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
