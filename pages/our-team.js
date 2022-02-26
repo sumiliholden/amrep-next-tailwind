@@ -1,6 +1,6 @@
 import Image from "next/image";
 //components
-import Layout from "../Layouts/Layout";
+import Layout from "../layouts/Layout";
 const people = [
   {
     name: "Byron Pantoja",

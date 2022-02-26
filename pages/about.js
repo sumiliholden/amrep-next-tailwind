@@ -1,5 +1,5 @@
 //components
-import Layout from "../Layouts/Layout";
+import Layout from "../layouts/Layout";
 import { Header } from "../components/sections/HeaderSectionComponent";
 import { FaqComponent } from "../components/sections/FaqComponent";
 import { StatsComponent } from "../components/sections/StatsComponent";

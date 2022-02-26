@@ -1,5 +1,5 @@
 //components
-import Layout from "../Layouts/Layout";
+import Layout from "../layouts/Layout";
 import { Header } from "../components/sections/HeaderSectionComponent";
 
 const title = "1-Week Free Trial!"
