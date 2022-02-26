@@ -218,7 +218,7 @@ export const Navigation = () => {
           <div className="flex justify-start lg:w-0 lg:flex-1">
             <Link href="/">
               <a>
-                <span className="sr-only">Workflow</span>
+                <span className="sr-only">Workflossw</span>
                 {renderLogo()}
               </a>
             </Link>
