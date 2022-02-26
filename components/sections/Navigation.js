@@ -23,6 +23,8 @@ import { useRouter } from "next/router";
 import { useUser } from "@auth0/nextjs-auth0";
 import { useTheme } from "next-themes";
 //components
+import LogoDark from "../../data/logo/darklogo.svg"
+import LogoLight from "../../data/logo/lightlogo.svg"
 const navigation = [
   {
     name: "Services",
@@ -194,6 +196,20 @@ export const Navigation = () => {
       );
     }
   };
+  const renderLogo = () => {
+    if (!mounted) return null;
+    const currentTheme = theme === "system" ? systemTheme : theme;
+
+    if (currentTheme === "dark") {
+      return (
+        <LogoDark/>
+      );
+    } else {
+      return (
+        <LogoLight/>
+      );
+    }
+  };
 
   return (
     <header className="dark:border-gray-700">
@@ -203,12 +219,12 @@ export const Navigation = () => {
             <Link href="/">
               <a>
                 <span className="sr-only">Workflow</span>
-                <img
-                  className="h-8 w-auto sm:h-10"
-                  src="https://tailwindui.com/img/logos/workflow-mark-purple-600-to-indigo-600.svg"
-                />
+                {renderLogo()}
               </a>
             </Link>
+          </div>
+          <div className="flex md:hidden">
+          {renderThemeChanger()}
           </div>
           <div className="-mr-2 -my-2 md:hidden">
             <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
@@ -310,6 +326,7 @@ export const Navigation = () => {
           </div>
         </div>
         {/* mobile layout */}
+        
         <Transition
           as={Fragment}
           enter="duration-200 ease-out"
@@ -319,6 +336,7 @@ export const Navigation = () => {
           leaveFrom="opacity-100 scale-100"
           leaveTo="opacity-0 scale-95"
         >
+          
           <Popover.Panel
             focus
             className="absolute z-30 top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden"
@@ -389,6 +407,7 @@ export const Navigation = () => {
             </div>
           </Popover.Panel>
         </Transition>
+        
       </Popover>
     </header>
   );

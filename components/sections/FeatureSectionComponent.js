@@ -80,10 +80,10 @@ export const FeatureSectionComponent = () => {
                 </span>
               </div>
               <div className="mt-6">
-                <h2 className="text-3xl font-extrabold tracking-tight text-gray-900">
+                <h2 className="text-3xl font-extrabold tracking-tight text-base-content">
                   Stay on top of customer support
                 </h2>
-                <p className="mt-4 text-lg text-gray-500">
+                <p className="mt-4 text-lg text-base-content">
                   Semper curabitur ullamcorper posuere nunc sed. Ornare iaculis
                   bibendum malesuada faucibus lacinia porttitor. Pulvinar
                   laoreet sagittis viverra duis. In venenatis sem arcu pretium
@@ -102,7 +102,7 @@ export const FeatureSectionComponent = () => {
             <div className="mt-8 border-t border-gray-200 pt-6">
               <blockquote>
                 <div>
-                  <p className="text-base text-gray-500">
+                  <p className="text-base text-base-content">
                     &ldquo;Cras velit quis eros eget rhoncus lacus ultrices sed
                     diam. Sit orci risus aenean curabitur donec aliquet. Mi
                     venenatis in euismod ut.&rdquo;
@@ -119,7 +119,7 @@ export const FeatureSectionComponent = () => {
                         height="25"
                       />
                     </div>
-                    <div className="text-base font-medium text-gray-700">
+                    <div className="text-base font-medium text-base-content">
                       Marcia Hill, Digital Marketing Manager
                     </div>
                   </div>
@@ -151,10 +151,10 @@ export const FeatureSectionComponent = () => {
                 </span>
               </div>
               <div className="mt-6">
-                <h2 className="text-3xl font-extrabold tracking-tight text-gray-900">
+                <h2 className="text-3xl font-extrabold tracking-tight text-base-content">
                   Better understand your customers
                 </h2>
-                <p className="mt-4 text-lg text-gray-500">
+                <p className="mt-4 text-lg text-base-content">
                   Semper curabitur ullamcorper posuere nunc sed. Ornare iaculis
                   bibendum malesuada faucibus lacinia porttitor. Pulvinar
                   laoreet sagittis viverra duis. In venenatis sem arcu pretium
@@ -201,7 +201,7 @@ export const GradientFeatureSectionComponent = () => {
           {features.map((feature) => (
             <div key={feature.name}>
               <div>
-                <span className="flex items-center justify-center h-12 w-12 rounded-md bg-white bg-opacity-10">
+                <span className="flex items-center justify-center h-12 w-12 rounded-md bg-white dark:bg-gray-800 bg-opacity-10">
                   <feature.icon
                     className="h-6 w-6 text-white"
                     aria-hidden="true"
