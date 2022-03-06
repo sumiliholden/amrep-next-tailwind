@@ -21,15 +21,10 @@ export default function Login() {
         <div className="flex-1 flex flex-col justify-center py-12 px-4 sm:px-6 lg:flex-none lg:px-20 xl:px-24">
           <div className="mx-auto w-full max-w-sm lg:w-96">
             <div>
-              <img
-                className="h-12 w-auto"
-                src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
-                alt="Workflow"
-              />
-              <h2 className="mt-6 text-3xl font-extrabold text-gray-900">
+              <h2 className="mt-6 text-3xl font-extrabold text-base-content">
                 Sign in to your account
               </h2>
-              <p className="mt-2 text-sm text-gray-600">
+              <p className="mt-2 text-sm text-base-content">
                 Or{" "}
                 <a
                   href="#"
@@ -43,7 +38,7 @@ export default function Login() {
             <div className="mt-8">
               <div>
                 <div>
-                  <p className="text-sm font-medium text-gray-700">
+                  <p className="text-sm font-medium text-base-content">
                     Sign in with
                   </p>
 
@@ -117,7 +112,7 @@ export default function Login() {
                     <div className="w-full border-t border-gray-300" />
                   </div>
                   <div className="relative flex justify-center text-sm">
-                    <span className="px-2 bg-white text-gray-500">
+                    <span className="px-2 bg-white text-gray-800">
                       Or continue with
                     </span>
                   </div>
@@ -129,7 +124,7 @@ export default function Login() {
                   <div>
                     <label
                       htmlFor="email"
-                      className="block text-sm font-medium text-gray-700"
+                      className="block text-sm font-medium text-base-content"
                     >
                       Email address
                     </label>
@@ -148,7 +143,7 @@ export default function Login() {
                   <div className="space-y-1">
                     <label
                       htmlFor="password"
-                      className="block text-sm font-medium text-gray-700"
+                      className="block text-sm font-medium text-base-content"
                     >
                       Password
                     </label>

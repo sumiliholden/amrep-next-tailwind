@@ -4,19 +4,19 @@ import Layout from "../layouts/Layout";
 import { PricingPlanComponent } from "../components/sections/PricingPlanComponent";
 import { LogoCloudComponentOnBrand } from "../components/sections/LogoCloudComponent";
 import { FaqComponent } from "../components/sections/FaqComponent";
-
-const title = "Video Editing"
+import { VideoGridComponent } from "../components/sections/VideoGridComponent";
+//data tier for photo-editing
+import { videoEditing } from "../data/tier";
+const tier = videoEditing
 export default function VideoEditing() {
   return (
     <>
       <Layout>
         <div className="bg-white dark:bg-gray-800">
           {/* Pricing with four tiers and toggle */}
-          <PricingPlanComponent title={title}/>
+          <PricingPlanComponent {...tier}/>
           {/* Logo cloud on brand */}
-          <LogoCloudComponentOnBrand />
-          {/* FAQ offset */}
-          <FaqComponent />
+          <VideoGridComponent />
         </div>
       </Layout>
     </>

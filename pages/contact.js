@@ -1,4 +1,3 @@
-import Image from "next/image";
 //components
 import Layout from "../layouts/Layout";
 
@@ -151,85 +150,8 @@ export default function Example() {
                     />
                   </div>
                 </div>
-                <fieldset className="sm:col-span-2">
-                  <legend className="block text-sm font-medium text-base-content">
-                    Expected budget
-                  </legend>
-                  <div className="mt-4 grid grid-cols-1 gap-y-4">
-                    <div className="flex items-center">
-                      <input
-                        id="budget-under-25k"
-                        name="budget"
-                        defaultValue="under_25k"
-                        type="radio"
-                        className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300"
-                      />
-                      <label htmlFor="budget-under-25k" className="ml-3">
-                        <span className="block text-sm text-base-content">
-                          Less than $25K
-                        </span>
-                      </label>
-                    </div>
-                    <div className="flex items-center">
-                      <input
-                        id="budget-25k-50k"
-                        name="budget"
-                        defaultValue="25k-50k"
-                        type="radio"
-                        className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300"
-                      />
-                      <label htmlFor="budget-25k-50k" className="ml-3">
-                        <span className="block text-sm text-base-content">
-                          $25K – $50K
-                        </span>
-                      </label>
-                    </div>
-                    <div className="flex items-center">
-                      <input
-                        id="budget-50k-100k"
-                        name="budget"
-                        defaultValue="50k-100k"
-                        type="radio"
-                        className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300"
-                      />
-                      <label htmlFor="budget-50k-100k" className="ml-3">
-                        <span className="block text-sm text-base-content">
-                          $50K – $100K
-                        </span>
-                      </label>
-                    </div>
-                    <div className="flex items-center">
-                      <input
-                        id="budget-over-100k"
-                        name="budget"
-                        defaultValue="over_100k"
-                        type="radio"
-                        className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300"
-                      />
-                      <label htmlFor="budget-over-100k" className="ml-3">
-                        <span className="block text-sm text-base-content">
-                          $100K+
-                        </span>
-                      </label>
-                    </div>
-                  </div>
-                </fieldset>
-                <div className="sm:col-span-2">
-                  <label
-                    htmlFor="how-did-you-hear-about-us"
-                    className="block text-sm font-medium text-base-content"
-                  >
-                    How did you hear about us?
-                  </label>
-                  <div className="mt-1">
-                    <input
-                      type="text"
-                      name="how-did-you-hear-about-us"
-                      id="how-did-you-hear-about-us"
-                      className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"
-                    />
-                  </div>
-                </div>
+                
+                
                 <div className="text-right sm:col-span-2">
                   <button
                     type="submit"

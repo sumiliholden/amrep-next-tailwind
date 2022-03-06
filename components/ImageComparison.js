@@ -1,7 +1,7 @@
 import Layout from "../layouts/Layout";
 import { useState, useRef, TouchEvent } from "react";
 
-export default function Example() {
+export default function ImageComparison(props) {
   const [imageRevealFraq, setImageRevealFraq] = useState(0.5);
   const imageContainer = useRef(undefined);
 
@@ -36,25 +36,25 @@ export default function Example() {
     window.onmouseup = undefined;
   };
   return (
-    <div className="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8 ">
+    <div className="max-w-7xl mx-auto py-0 sm:py-8 sm:px-6  ">
       <div
         ref={imageContainer}
         className="overflow-hidden relative select-none group"
       >
         <img
-          src="https://tailwindui.com/img/ecommerce-images/home-page-03-featured-category.jpg"
+          src={props.beforeImage}
           alt="Two models wearing women's black cotton crewneck tee and off-white cotton crewneck tee."
           className="pointer-events-none"
         />
         
         <img
           style={{
-            filter: "grayscale(100%)",
+            filter: "",
             clipPath: `polygon(0 0, ${imageRevealFraq * 100}% 0, ${
               imageRevealFraq * 100
             }% 100%, 0 100%)`,
           }}
-          src="https://tailwindui.com/img/ecommerce-images/home-page-03-featured-category.jpg"
+          src={props.afterImage}
           alt="Two models wearing women's black cotton crewneck tee and off-white cotton crewneck tee."
           className="absolute inset-0 pointer-events-none"
         />
