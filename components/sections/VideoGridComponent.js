@@ -28,7 +28,7 @@ export const VideoGridComponent = () => {
       <Header title={title} description={description} />
       <ul
         role="list"
-        className="grid grid-cols-2 gap-x-2 gap-y-2 sm:grid-cols-2 sm:gap-x-6 lg:grid-cols-2 xl:gap-x-8"
+        className="grid gap-x-2 gap-y-2 sm:gap-x-6 lg:grid-cols-2 xl:gap-x-8 sm:grid-cols-1"
       >
         {files.map((file, key) => (
           <li key={key} className="relative">
@@ -46,14 +46,12 @@ export const VideoGridComponent = () => {
               >
                 <iframe
                   src={file.source}
-                  width="640"
-                  height="360"
                   frameBorder="0"
                   allow="autoplay; fullscreen; picture-in-picture"
                   allowFullScreen=""
                   videotitle={file.videoTitle}
                   data-ready="true"
-                  className="w-full h-full"
+                  className="w-full h-full aspect-video bg-white dark:bg-gray-800"
                   // style="width: 100%; height: 100%;"
                 ></iframe>
               </div>
