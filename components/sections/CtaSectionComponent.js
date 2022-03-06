@@ -7,27 +7,37 @@ export const CtaSectioncomponent = () => {
           <div className="pt-10 pb-12 px-6 sm:pt-16 sm:px-16 lg:py-16 lg:pr-0 xl:py-20 xl:px-20">
             <div className="lg:self-center">
               <h2 className="text-3xl font-extrabold text-base-content sm:text-5xl">
-                <span className="block">Real Estate Photo Post Processing </span>
+                <span className="block">
+                  Real Estate Photo Post Processing{" "}
+                </span>
                 <span className="block">Based in Virginia Beach, VA</span>
               </h2>
               <p className="mt-4 text-2xl sm:text-2xl leading-6 text-base-content">
-              New clients enjoy 1 Week of Free Processing as a trial before you commit!
+                New clients enjoy 1 Week of Free Processing as a trial before
+                you commit!
               </p>
               <a
                 href="#"
                 className="mt-8 bg-indigo-600 border border-transparent rounded-md shadow px-5 py-3 inline-flex items-center font-medium text-white hover:bg-indigo-700"
               >
-                Sign up for free
+                Avail our free trial
               </a>
             </div>
           </div>
           <div className="-mt-6 aspect-w-5 aspect-h-3 md:aspect-w-2 md:aspect-h-1 relative">
-            <Image
-              className="transform translate-x-6 translate-y-6 rounded-md object-cover object-left-top sm:translate-x-16 lg:translate-y-20"
-              src="https://tailwindui.com/img/component-images/full-width-with-sidebar.jpg"
-              alt="App screenshot"
-              layout="fill"
-            />
+            <iframe
+              src="https://player.vimeo.com/video/659875234?h=1980ccb4fb&autoplay=1&loop=1&title=0&byline=0&portrait=0"
+              width="640"
+              height="360"
+              frameBorder="0"
+              allow="autoplay; fullscreen; picture-in-picture"
+              allowFullScreen=""
+              videotitle="test"
+              data-ready="true"
+              className="w-full h-full"
+              
+              // style="width: 100%; height: 100%;"
+            ></iframe>
           </div>
         </div>
       </div>

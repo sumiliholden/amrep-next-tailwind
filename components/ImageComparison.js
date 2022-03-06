@@ -1,5 +1,5 @@
-import Layout from "../layouts/Layout";
-import { useState, useRef, TouchEvent } from "react";
+
+import { useState, useRef } from "react";
 
 export default function ImageComparison(props) {
   const [imageRevealFraq, setImageRevealFraq] = useState(0.5);

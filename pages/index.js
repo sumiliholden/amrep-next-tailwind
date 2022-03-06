@@ -17,10 +17,8 @@ export default function Home() {
     <div>
       <Layout>
         <CtaSectioncomponent />
-        <LogoCloudComponent />
         <FeatureSectionComponent />
         <GradientFeatureSectionComponent />
-        <StatsComponent />
       </Layout>
     </div>
   );
